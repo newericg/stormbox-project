@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="div">
+    <h2>
+      {{ cardTitle }}
+    </h2>
+  </div>
+  <div class="div">
+    @if (cardData) {
+    <div class="row">
+      @for (data of cardData; track data) {
+      <div class="div">
+        <div class="row">
+          @if (cardDataTitle) {
+          <div class="col">
+            {{ cardDataTitle }}
+          </div>
+          }
+          <div class="col">
+            {{ cardData }}
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</div>
