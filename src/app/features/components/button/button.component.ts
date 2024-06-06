@@ -12,5 +12,6 @@ export class ButtonComponent {
   @Input() backgroundColor: string = ''
   @Input() text: string = ''
   @Input() icon: string = ''
+  @Input() disabled: boolean = false
 
 }

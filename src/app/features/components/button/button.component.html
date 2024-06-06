@@ -1,16 +1,19 @@
-<button class="mx-2 px-2 row d-flex justify-content-center align-items-center" [style]="{'background-color': backgroundColor}" type="button">
-    @if (icon) {
-        <div class="col-2">
-            <i [class]="icon" style="font-size: 1.2rem;"></i>
-        </div>
-        <div class="col-10 d-flex align-items-center">
-            <p class="mb-0"> {{ text }} </p>
-        </div>
-    } @else {
-        <div class="col-12 d-flex align-items-center">
-            <p class="mb-0"> {{ text }} </p>
-        </div>
-    }
-   
-    
+<button
+  class="mx-2 px-2 row d-flex justify-content-center align-items-center"
+  [style]="{ 'background-color': backgroundColor }"
+  type="button"
+  [disabled]="disabled"
+>
+  @if (icon) {
+  <div class="col-2">
+    <i [class]="icon" style="font-size: 1.2rem"></i>
+  </div>
+  <div class="col-10 d-flex align-items-center">
+    <p class="mb-0">{{ text }}</p>
+  </div>
+  } @else {
+  <div class="col-12 d-flex align-items-center">
+    <p class="mb-0">{{ text }}</p>
+  </div>
+  }
 </button>
