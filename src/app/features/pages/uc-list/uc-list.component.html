@@ -1,0 +1,38 @@
+<div class="uclist-page">
+  <div class="div uc-page px-5">
+    <div class="row">
+      <div class="col-12 py-3 d-flex justify-content-end">
+        <app-button
+          icon="bi bi-house-add-fill"
+          backgroundColor="#6691e7"
+          text="Cadastro manual"
+          (click)="navigateTo('cadastro-uc')"
+        ></app-button>
+        <app-button
+          icon="bi bi-file-earmark-plus-fill"
+          backgroundColor="#6691e7"
+          text="Importação planilha"
+        ></app-button>
+      </div>
+      <div class="col-12 py-1 d-flex justify-content-end">
+        <a href="">
+          <i class="bi bi-download"></i>
+          Download modelo de planilha</a
+        >
+      </div>
+      <div class="my-3">
+        <div class="row d-flex">
+          @for (card of cardList; track card) { 
+            @if ($index === 0) {
+          <app-card class="col" [cardTitle]="card.title"></app-card>
+          } @else if ($index === 4) {
+          <app-card class="col-4" [cardTitle]="card.title"></app-card>
+          } @else {
+          <app-card class="col-2" [cardTitle]="card.title"></app-card>
+          } }
+        </div>
+      </div>
+      <app-table tableTitle="Lista de UCs cadastradas"></app-table>
+    </div>
+  </div>
+</div>
