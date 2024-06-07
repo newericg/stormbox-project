@@ -65,6 +65,7 @@ export class UcRegisterPageComponent implements OnInit {
   onSubmit() {
     console.log(this.UCForm.value);
     this.toast.success('UC cadastrada!', 'Successo!')
+    this._route.navigate(['/gestao-de-ucs']);
   }
 
   navigateTo(route: string) {
