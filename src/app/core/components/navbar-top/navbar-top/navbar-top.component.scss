@@ -27,3 +27,15 @@
     font-weight: bolder;
     font-size: 17px;
 }
+
+@media (max-width: 1199.98px) { 
+    .navbar-top {
+        width: 100vw;
+        margin-left: 0;
+        height: 20vh;
+    }
+
+    .profile-card {
+        margin-right: 0px;
+    }
+ }

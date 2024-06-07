@@ -8,28 +8,28 @@ export const routes: Routes = [
   { path: '', component: HomePageComponent, title: 'Home' },
   { path: 'gestao-de-ucs', component: UcListComponent, title: 'Gestão de UCs' },
   {
-      path: 'cadastro-uc',
-      component: UcRegisterPageComponent,
-      title: 'Cadastro manual',
-    },
-    {
-      path: 'gestao-de-ciclos',
-      component: ConstructionPageComponent,
-      title: 'Em construção!',
-    },
-    {
-        path: 'gestao-de-rateios',
-        component: ConstructionPageComponent,
-        title: 'Em construção!',
-      },
-      {
-        path: 'gestao-de-faturamento',
-        component: ConstructionPageComponent,
-        title: 'Em construção!',
-      },
-      {
-        path: 'configuracoes',
-        component: ConstructionPageComponent,
-        title: 'Em construção!',
-      },
+    path: 'cadastro-uc',
+    component: UcRegisterPageComponent,
+    title: 'Cadastro manual',
+  },
+  {
+    path: 'gestao-de-ciclos',
+    component: ConstructionPageComponent,
+    title: 'Em construção!',
+  },
+  {
+    path: 'gestao-de-rateios',
+    component: ConstructionPageComponent,
+    title: 'Em construção!',
+  },
+  {
+    path: 'gestao-de-faturamento',
+    component: ConstructionPageComponent,
+    title: 'Em construção!',
+  },
+  {
+    path: 'configuracoes',
+    component: ConstructionPageComponent,
+    title: 'Em construção!',
+  },
 ];
