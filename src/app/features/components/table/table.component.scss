@@ -1,33 +1,33 @@
 .table-div {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    min-height: 350px;
-    background-color: white;
-    border-radius: 15px;
-    overflow-x: scroll;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  min-height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  overflow-x: scroll;
 
-    .table-header { 
-        h4 {
-            font-weight:900
-        }
-        
+  .table-header {
+    h4 {
+      font-weight: 900;
     }
+  }
 }
 
 .table-empty {
-    margin: auto;
-    height: 300px;
+  margin: auto;
+  height: 300px;
 }
 
 [class*="status-btn"] {
-    width: 50%;
-    border-radius: 14px;
-    color: white;
+  width: 50%;
+  border-radius: 14px;
+  color: white;
 }
 
 .status-btn-active {
-    background-color: #13c56b;
+  background-color: #13c56b;
 }
 
 .status-btn-inactive {
-    background-color: #cdcdcd;
+  background-color: #cdcdcd;
 }

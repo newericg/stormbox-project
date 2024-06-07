@@ -1,28 +1,29 @@
 .card-item {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-radius: 15px;
-    background-color: white;
-    height: 175px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 15px;
+  background-color: white;
+  height: 175px;
 
-    .card-title {
-        border-bottom: 1px solid rgb(238, 238, 238);
-        h4 {
-            font-weight: bolder;
-            margin: 0;
-        }
+  .card-title {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    h4 {
+      font-weight: bolder;
+      margin: 0;
     }
+  }
 
-    .card-value-total {
-        font-weight: bolder;
-        font-size: 75px;
-    }
+  .card-value-total {
+    font-weight: bolder;
+    font-size: 75px;
+  }
 
-    .card-value-half {
-        font-weight: bolder;
-        font-size: 55px;
-    }
+  .card-value-half {
+    font-weight: bolder;
+    font-size: 55px;
+  }
 
-    .sub-title {
-        font-size: 12px;
-    }
+  .sub-title {
+    font-size: 12px;
+  }
 }

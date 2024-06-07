@@ -1,41 +1,41 @@
 .navbar-top {
-    position: fixed;
-    background-color: white;
-    z-index: 5;
-    width: 88vw;
-    margin-left: 12vw;
-    height: 15vh;
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+  width: 88vw;
+  margin-left: 12vw;
+  height: 15vh;
 }
 
 .profile-card {
-    background-color: #f3f3f9;
-    margin-right: 75px;
+  background-color: #f3f3f9;
+  margin-right: 75px;
 
-    img {
-        object-fit: contain;
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-    }
+  img {
+    object-fit: contain;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 }
 
 .page-title {
-    font-weight: bolder;
-    font-size: 17px;
+  font-weight: bolder;
+  font-size: 17px;
 }
 
-@media (max-width: 1199.98px) { 
-    .navbar-top {
-        width: 100vw;
-        margin-left: 0;
-        height: 20vh;
-    }
+@media (max-width: 1199.98px) {
+  .navbar-top {
+    width: 100vw;
+    margin-left: 0;
+    height: 20vh;
+  }
 
-    .profile-card {
-        margin-right: 0px;
-    }
- }
+  .profile-card {
+    margin-right: 0px;
+  }
+}

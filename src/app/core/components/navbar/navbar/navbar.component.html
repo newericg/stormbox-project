@@ -16,12 +16,20 @@
   </div>
 </div>
 
-<div class="nav-menu-mobile d-xl-none d-flex justify-content-center align-items-center" (click)="openMenuMobile()">
-  <i [style]="'color: white'"  class="bi bi-list" style="font-size: 1.5rem;"></i>
+<div
+  class="nav-menu-mobile d-xl-none d-flex justify-content-center align-items-center"
+  (click)="openMenuMobile()"
+>
+  <i [style]="'color: white'" class="bi bi-list" style="font-size: 1.5rem"></i>
 </div>
 
-<div class="navbar-mobile justify-content-center row d-xl-none" [ngStyle]="{'display': navMobileDisplay}">
-  <div class="nav col-6 flex-column justify-content-center align-items-around gap-5">
+<div
+  class="navbar-mobile justify-content-center row d-xl-none"
+  [ngStyle]="{ display: navMobileDisplay }"
+>
+  <div
+    class="nav col-6 flex-column justify-content-center align-items-around gap-5"
+  >
     <img
       src="../../../../../assets/COGNI-LOGO.png"
       class="img img-fluid"
@@ -29,14 +37,13 @@
     />
     <div (click)="openMenuMobile()">
       @for (item of navbarMenu; track item) {
-        <app-navbar-item
-          [itemIcon]="item.icon"
-          [itemName]="item.name"
-          [arrowIcon]="item.arrow"
-          [route]="item.route"
-        ></app-navbar-item>
-        }
+      <app-navbar-item
+        [itemIcon]="item.icon"
+        [itemName]="item.name"
+        [arrowIcon]="item.arrow"
+        [route]="item.route"
+      ></app-navbar-item>
+      }
     </div>
-    
   </div>
 </div>

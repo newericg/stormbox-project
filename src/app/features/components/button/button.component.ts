@@ -5,13 +5,11 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss'
+  styleUrl: './button.component.scss',
 })
 export class ButtonComponent {
-
-  @Input() backgroundColor: string = ''
-  @Input() text: string = ''
-  @Input() icon: string = ''
-  @Input() disabled: boolean = false
-
+  @Input() backgroundColor: string = '';
+  @Input() text: string = '';
+  @Input() icon: string = '';
+  @Input() disabled: boolean = false;
 }

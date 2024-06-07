@@ -5,7 +5,6 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { CardComponent } from '../../components/card/card.component';
 import { TableComponent } from '../../components/table/table.component';
 
-
 @Component({
   selector: 'app-uc-list',
   standalone: true,
@@ -16,11 +15,10 @@ import { TableComponent } from '../../components/table/table.component';
 export class UcListComponent implements OnInit {
   constructor(private _route: Router) {}
 
-
   // TROCAR AS LINHAS ABAIXO COMENTADAS PARA COMPORTAMENTO COM OU SEM DADOS
 
   // response = [];
-  response = ResponseData
+  response = ResponseData;
 
   tableHeaderList: any = {};
   totalUCs!: number;
@@ -68,10 +66,10 @@ export class UcListComponent implements OnInit {
   }
 
   getResponseHeader() {
-    if(this.response.length) {
+    if (this.response.length) {
       this.tableHeaderList = Object.keys(this.response[0]);
     }
-    }
+  }
 
   getCardsDatas() {
     if (this.response) {
@@ -85,11 +83,10 @@ export class UcListComponent implements OnInit {
     let inactive: number = 0;
     if (this.response) {
       this.response.map((uc: any) => {
-          uc.Status === false ? (inactive = inactive + 1) : (active = active + 1);
-          this.cardList[1].ativos = active;
-          this.cardList[1].inativos = inactive;
+        uc.Status === false ? (inactive = inactive + 1) : (active = active + 1);
+        this.cardList[1].ativos = active;
+        this.cardList[1].inativos = inactive;
       });
-      
     }
   }
 

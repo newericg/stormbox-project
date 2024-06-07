@@ -6,18 +6,8 @@ import { Title } from '@angular/platform-browser';
   standalone: true,
   imports: [],
   templateUrl: './navbar-top.component.html',
-  styleUrl: './navbar-top.component.scss'
+  styleUrl: './navbar-top.component.scss',
 })
-
 export class NavbarTopComponent {
-
-  constructor(
-    public titleService: Title,
-  ) {}
-
-  
-  
- 
-  
- 
+  constructor(public titleService: Title) {}
 }

@@ -18,10 +18,7 @@ import { InputComponent } from '../../components/input/input.component';
     NgxMaskDirective,
     CommonModule,
   ],
-  providers: [
-    provideNgxMask({
-    }),
-  ],
+  providers: [provideNgxMask({})],
   templateUrl: './uc-register-page.component.html',
   styleUrl: './uc-register-page.component.scss',
 })
@@ -30,7 +27,7 @@ export class UcRegisterPageComponent implements OnInit {
 
   private formBuilderService = inject(FormBuilder);
 
-  toast = inject(ToastrService)
+  toast = inject(ToastrService);
 
   concessionariaList = responses.concessionaria;
   ufList = responses.UF;
@@ -64,7 +61,7 @@ export class UcRegisterPageComponent implements OnInit {
 
   onSubmit() {
     console.log(this.UCForm.value);
-    this.toast.success('UC cadastrada!', 'Successo!')
+    this.toast.success('UC cadastrada!', 'Successo!');
     this._route.navigate(['/gestao-de-ucs']);
   }
 

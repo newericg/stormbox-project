@@ -6,20 +6,17 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterModule],
   templateUrl: './navbar-item.component.html',
-  styleUrl: './navbar-item.component.scss'
+  styleUrl: './navbar-item.component.scss',
 })
 export class NavbarItemComponent implements OnInit {
-  constructor(private _route: Router){}
+  constructor(private _route: Router) {}
 
-  @Input() itemName: string = ''
-  @Input() itemIcon: string = ''
-  @Input() route: string = ''
-  @Input() arrowIcon: boolean = false
+  @Input() itemName: string = '';
+  @Input() itemIcon: string = '';
+  @Input() route: string = '';
+  @Input() arrowIcon: boolean = false;
 
-
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   navigateTo(route: string) {
     this._route.navigate([route]);

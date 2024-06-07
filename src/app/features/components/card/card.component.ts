@@ -6,11 +6,10 @@ import { CountUpModule } from 'ngx-countup';
   standalone: true,
   imports: [CountUpModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
 })
 export class CardComponent {
-
-  @Input() cardTitle: string = ''
+  @Input() cardTitle: string = '';
 
   @Input() cardData!: any;
   @Input() cardDataTitle!: string;
@@ -21,5 +20,5 @@ export class CardComponent {
   @Input() cardData4!: any;
   @Input() cardDataTitle4!: string;
 
-  @Input() card: any = {}
+  @Input() card: any = {};
 }
