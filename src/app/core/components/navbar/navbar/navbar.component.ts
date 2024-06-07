@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavbarItemComponent } from '../navbar-item/navbar-item.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NavbarItemComponent],
+  imports: [NavbarItemComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -49,4 +50,10 @@ export class NavbarComponent {
     }
   ]
 
+  navMobileDisplay: string = 'none'
+
+  openMenuMobile() {
+    this.navMobileDisplay === 'none' ? this.navMobileDisplay = 'flex' : this.navMobileDisplay = 'none'
+    console.log(this.navMobileDisplay)
+  }
 }

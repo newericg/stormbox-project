@@ -1,28 +1,31 @@
-# StormboxProject
+<div>
+  <img src="">
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Índice
 
-## Code scaffolding
+* [Sobre](#Sobre)
+* [Teste o Projeto](#Teste-o-Projeto)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+# Sobre o Projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p align="center">
+<img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-brightgreen?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Version-1.0-green?style=for-the-badge"/>
+</p>
 
-## Running unit tests
+Stormbox é um projeto desenvolvido utilizando Angular e TypeScript simulando a parte do Front-End de um cadastro, utilizando dados mocados.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<div style="display: inline_block">
+    <img align="center" alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+    <img align="center" alt="Angular" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
+</div><br>
 
-## Running end-to-end tests
+# Teste o Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Para testar, basta acessar https://cogni-system.netlify.app/ ou você pode tambem clonar e executar o npm run start para rodar localmente
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# stormbox-project
