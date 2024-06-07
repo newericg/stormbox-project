@@ -9,7 +9,7 @@
       @if (card.title === 'Total UCs') { 
         <div class="row">
           <div class="col">
-            <p class="card-value-total m-0">
+            <p class="card-value-total m-0" [countUp]="cardData" [options]="{ duration: 5 }">
               {{ cardData }}
             </p>
           </div>
@@ -20,7 +20,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData" [options]="{ duration: 3 }">
               {{ cardData }}
             </p>
           </div>
@@ -28,7 +28,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle2 }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData2" [options]="{ duration: 3 }">
               {{ cardData2 }}
             </p>
           </div>
@@ -39,7 +39,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData" [options]="{ duration: 3 }">
               {{ cardData }}
             </p>
           </div>
@@ -47,7 +47,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle2 }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData2" [options]="{ duration: 3 }">
               {{ cardData2 }}
             </p>
           </div>
@@ -55,7 +55,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle3 }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData3" [options]="{ duration: 3 }">
               {{ cardData3 }}
             </p>
           </div>
@@ -63,7 +63,7 @@
             <p class="mb-0 sub-title">
               {{ cardDataTitle4 }}
             </p>
-            <p class="card-value-half m-0">
+            <p class="card-value-half m-0" [countUp]="cardData4" [options]="{ duration: 3 }">
               {{ cardData4 }}
             </p>
           </div>

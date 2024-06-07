@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { CountUpModule } from 'ngx-countup';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [CountUpModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
