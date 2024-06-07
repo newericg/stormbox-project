@@ -1,5 +1,5 @@
 <div>
-  <img src="">
+  <img src="https://github.com/newericg/stormbox-project/blob/main/src/assets/stormbox-project.png">
 </div>
 
 
