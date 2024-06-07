@@ -45,18 +45,18 @@ export class UcRegisterPageComponent implements OnInit {
   }
 
   protected UCForm = this.formBuilderService.group({
-    vigenciaInicial: ['', Validators.required],
+    vigenciaInicial: [''],
     concessionaria: ['', Validators.required],
     UF: ['', Validators.required],
     unidade: ['', Validators.required],
-    cliente: ['', Validators.required],
+    cliente: [''],
     empresa: ['', Validators.required],
     descricaoUnidade: ['', Validators.required],
     tipo: ['', Validators.required],
     modalidade: ['', Validators.required],
     clienteRural: ['', Validators.required],
-    organizacao: ['', Validators.required],
-    ligacao: ['', Validators.required],
+    organizacao: [''],
+    ligacao: [''],
     cpfOuCnpj: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     senha: ['', [Validators.required, Validators.minLength(6)]],

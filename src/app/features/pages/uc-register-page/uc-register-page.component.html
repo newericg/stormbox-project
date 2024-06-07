@@ -31,10 +31,6 @@
           type="date"
           formControlName="vigenciaInicial"
         />
-        @if (UCForm.controls['vigenciaInicial'].invalid &&
-        UCForm.controls['vigenciaInicial'].touched) {
-        <div class="text-danger">Campo obrigatório.</div>
-        }
       </div>
     </div>
 
@@ -42,7 +38,7 @@
     <div class="row">
       <div class="col-12 col-xl-3 my-2">
         <div class="d-flex justify-content-between my-3">
-          <label>Concessionária *</label>
+          <label>Concessionária <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <select
@@ -67,7 +63,7 @@
       </div>
       <div class="col-12 col-xl-1 my-2">
         <div class="d-flex justify-content-between my-3">
-          <label>UF *</label>
+          <label>UF <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <select
@@ -83,7 +79,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Nº unidade/instalação *</label>
+          <label>Nº unidade/instalação <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input 
@@ -107,7 +103,7 @@
     <div class="row">
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Empresa *</label>
+          <label>Empresa <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input 
@@ -120,7 +116,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Descrição da unidade *</label>
+          <label>Descrição da unidade <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input
@@ -136,7 +132,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Tipo *</label>
+          <label>Tipo <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <select 
@@ -153,7 +149,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Modalidade *</label>
+          <label>Modalidade <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <select
@@ -174,7 +170,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>É cliente rural? *</label>
+          <label>É cliente rural? <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <select
@@ -235,7 +231,7 @@
     <div class="row">
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>CPF/CNPJ *</label>
+          <label>CPF/CNPJ <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input
@@ -256,7 +252,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>E-mail *</label>
+          <label>E-mail <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input
@@ -278,7 +274,7 @@
       </div>
       <div class="col-12 col-xl-2 my-3">
         <div class="d-flex justify-content-between my-2">
-          <label>Senha *</label>
+          <label>Senha <span class="text-danger">*</span></label>
           <i class="bi bi-info-circle"></i>
         </div>
         <input
