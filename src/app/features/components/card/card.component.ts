@@ -10,6 +10,15 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
 
   @Input() cardTitle: string = ''
-  @Input() cardDataTitle: string = ''
-  @Input() cardData?: any
+
+  @Input() cardData!: any;
+  @Input() cardDataTitle!: string;
+  @Input() cardData2!: any;
+  @Input() cardDataTitle2!: string;
+  @Input() cardData3!: any;
+  @Input() cardDataTitle3!: string;
+  @Input() cardData4!: any;
+  @Input() cardDataTitle4!: string;
+
+  @Input() card: any = {}
 }

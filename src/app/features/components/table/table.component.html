@@ -1,26 +1,40 @@
 <div class="table-header my-2 h-auto">
-    <div class="div card-title p-3">
+    <div class="div card-title p-3 border-bottom">
       <h4>
         {{ tableTitle }}
+        
       </h4>
     </div>
     <table class="table h-100">
-        <thead>
-          <tr class="text-center">
-            @for (header of tableHeader; track header) {
-              <th scope="col"> {{ header }} </th>
+        <thead class="mt-3">
+          <tr class="text-center ">
+            @for (header of tableHeader.slice(0, 5); track header) {
+              <th scope="col"> {{ header }} <i class="bi bi-funnel-fill"></i> </th>
             }
             <th scope="col">  </th>
           </tr>
         </thead>
         <tbody>
           @for (itemData of tableData; track itemData) {
-            <tr>
-              @for (header of tableHeader; track header) {
-                <td class="my-1 text-center"> {{ itemData[header] }} </td>
-                
+            <tr class="">
+              @for (header of tableHeader.slice(0, 5) ; track header) {
+                @if (itemData[header] === false) {
+                  <td class="py-3 text-center border-0 d-flex justify-content-center"> 
+                    <p class="status-btn-inactive">Inativo</p>
+                  </td>
+                } @else if (itemData[header] === true ) {
+                  <td class="py-3 text-center border-0 d-flex justify-content-center"> 
+                    <p class="status-btn-active">Ativo</p> 
+                  </td>
+                } @else {
+                  <td class="py-3 text-center border-0"> {{ itemData[header] }} </td>
+                }
               }
-              <td> Config </td>
+              <td class="border-0 py-3"> 
+                <i style = "color:gray;" class="bi bi-pen-fill px-2"></i>
+                <i style = "color:blue;" class="bi bi-gear-fill px-2"></i>
+                <i style = "color:red;" class="bi bi-trash-fill px-2"></i>
+
             </tr>
             
           }

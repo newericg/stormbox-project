@@ -3,4 +3,25 @@
     height: 100%;
     background-color: white;
     border-radius: 15px;
+
+    .card-title { 
+        h4 {
+            font-weight:900
+        }
+        
+    }
+}
+
+[class*="status-btn"] {
+    width: 50%;
+    border-radius: 14px;
+    color: white;
+}
+
+.status-btn-active {
+    background-color: #13c56b;
+}
+
+.status-btn-inactive {
+    background-color: #cdcdcd;
 }
