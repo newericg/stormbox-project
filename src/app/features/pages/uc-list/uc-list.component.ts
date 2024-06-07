@@ -16,6 +16,9 @@ import { TableComponent } from '../../components/table/table.component';
 export class UcListComponent implements OnInit {
   constructor(private _route: Router) {}
 
+
+  // TROCAR AS LINHAS ABAIXO COMENTADAS PARA COMPORTAMENTO COM OU SEM DADOS
+
   // response = [];
   response = ResponseData
 
