@@ -1,4 +1,4 @@
-<div class="table-header my-2">
+<div class="table-header my-2 h-auto">
     <div class="div card-title p-3">
       <h4>
         {{ tableTitle }}
@@ -6,32 +6,25 @@
     </div>
     <table class="table h-100">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+          <tr class="text-center">
+            @for (header of tableHeader; track header) {
+              <th scope="col"> {{ header }} </th>
+            }
+            <th scope="col">  </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td></td>
-          </tr>
+          @for (itemData of tableData; track itemData) {
+            <tr>
+              @for (header of tableHeader; track header) {
+                <td class="my-1 text-center"> {{ itemData[header] }} </td>
+                
+              }
+              <td> Config </td>
+            </tr>
+            
+          }
         </tbody>
       </table>
+
 </div>

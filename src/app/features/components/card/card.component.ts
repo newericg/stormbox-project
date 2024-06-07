@@ -11,5 +11,5 @@ export class CardComponent {
 
   @Input() cardTitle: string = ''
   @Input() cardDataTitle: string = ''
-  @Input() cardData: string = ''
+  @Input() cardData?: any
 }

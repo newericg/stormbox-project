@@ -4,10 +4,9 @@
       {{ cardTitle }}
     </h4>
   </div>
-  <div class="div text-center p-4">
+  <div class="text-center d-flex justify-content-center align-items-center">
     @if (cardData) {
     <div class="row">
-      @for (data of cardData; track data) {
       <div class="div">
         <div class="row">
           @if (cardDataTitle) {
@@ -16,17 +15,23 @@
           </div>
           }
           <div class="col">
-            {{ cardData }}
+            <p class="card-value-total m-0">
+              {{ cardData }}
+            </p>
+            
           </div>
         </div>
       </div>
-      }
+      
     </div>
     } @else {
-    <p>
-      Sem dados. <br />
-      Cadastre suas UCs
-    </p>
+      <div class="row d-flex align-items-center my-auto">
+        <p>
+          Sem dados. <br />
+          Cadastre suas UCs
+        </p>
+      </div>
+    
     }
   </div>
 </div>
