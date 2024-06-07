@@ -1,0 +1,116 @@
+{
+    "concessionaria": [
+        {
+            "id": 1,
+            "title": "CEMIG Distribuição"
+            
+        },
+        {
+            "id": 2,
+            "title": "Amazonas Energia"
+            
+        },
+        {
+            "id": 2,
+            "title": "CELESC-SC"
+            
+        },
+        {
+            "id": 2,
+            "title": "CPFL Paulista"
+            
+        }
+    ],
+    "UF": [
+        {
+            "id": 1,
+            "name": "SP"
+        },
+        {
+            "id": 2,
+            "name": "RJ"
+        },
+        {
+            "id": 3,
+            "name": "MG"
+        }
+    ],
+    "Tipo": [
+        {
+            "id": 1,
+            "name": "Consumidor"
+        },
+        {
+            "id": 2,
+            "name": "Gerador"
+        }
+    ],
+    "Modalidade": [
+        {
+            "id": 1,
+            "name": "A1"
+        },
+        {
+            "id": 2,
+            "name": "A2"
+        },
+        {
+            "id": 3,
+            "name": "A3"
+        },
+        {
+            "id": 4,
+            "name": "B1"
+        },
+        {
+            "id": 5,
+            "name": "B2"
+        },
+        {
+            "id": 6,
+            "name": "B3"
+        }
+    ],
+    "Cliente rural": [
+        {
+            "id": 1,
+            "name": "Sim"
+        },
+        {
+            "id": 2,
+            "name": "Não"
+        }
+    ],
+    "Tipo de organização": [
+        {
+            "id": 1,
+            "name": "Autoconsumo"
+        },
+        {
+            "id": 2,
+            "name": "Cooperativa"
+        },
+        {
+            "id": 3,
+            "name": "Associação"
+        },
+        {
+            "id": 4,
+            "name": "Consórcio"
+        }
+    ],
+    "Tipo de ligação": [
+        {
+            "id": 1,
+            "name": "Monofásico"
+        },
+        {
+            "id": 2,
+            "name": "Bifásico"
+        },
+        {
+            "id": 3,
+            "name": "Trifásico"
+        }
+    ]
+}

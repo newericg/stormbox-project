@@ -1,0 +1,29 @@
+.navbar-top {
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+    width: 88vw;
+    margin-left: 12vw;
+    height: 15vh;
+}
+
+.profile-card {
+    background-color: #f3f3f9;
+    margin-right: 75px;
+
+    img {
+        object-fit: contain;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.page-title {
+    font-weight: bolder;
+    font-size: 17px;
+}

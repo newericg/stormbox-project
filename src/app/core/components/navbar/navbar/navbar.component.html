@@ -1,10 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="nav flex-column">
-            <p>NAVBAR</p>
-            <p>NAVBAR</p>
-            <p>NAVBAR</p>
-            <p>NAVBAR</p>
-        </div>
-    </div>
+<div class="navbar row">
+  <div class="nav flex-column justify-content-start h-100">
+    <img
+      src="../../../../../assets/COGNI-LOGO.png"
+      class="img img-fluid"
+      alt="system-logo"
+    />
+    @for (item of navbarMenu; track item) {
+    <app-navbar-item
+      [itemIcon]="item.icon"
+      [itemName]="item.name"
+      [arrowIcon]="item.arrow"
+      [route]="item.route"
+    ></app-navbar-item>
+    }
+  </div>
 </div>
