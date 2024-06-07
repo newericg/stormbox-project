@@ -1,0 +1,136 @@
+[
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Consumidor",
+        "Grupo": "A1",
+        "UF": "SP",
+        "CPF/CNPJ": "1646512122"
+        
+
+    },
+    {
+        "Unidade/Instalação": "5465333",
+        "Cliente": "465652",
+        "Empresa": "ACME",
+        "Unidade": "Edificio XYZ",
+        "Status" : true,
+        "Tipo": "Consumidor",
+        "Grupo": "A2",
+        "UF": "SP",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "54652332",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Bloco 2A",
+        "Status" : true,
+        "Tipo": "Consumidor",
+        "Grupo": "A3",
+        "UF": "SP",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "54644444",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : true,
+        "Tipo": "Consumidor",
+        "Grupo": "B1",
+        "UF": "RJ",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Consumidor",
+        "Grupo": "A1",
+        "UF": "SP",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "B2",
+        "UF": "MG",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "A1",
+        "UF": "MG",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "A1",
+        "UF": "MG",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "A1",
+        "UF": "RJ",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "ABC Ltda",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "A1",
+        "UF": "RJ",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "Fazenda Amorim",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "A2",
+        "UF": "RJ",
+        "CPF/CNPJ": "1646512122"
+    },
+    {
+        "Unidade/Instalação": "5465132",
+        "Cliente": "465652",
+        "Empresa": "Usina II",
+        "Unidade": "Edificio XYZ",
+        "Status" : false,
+        "Tipo": "Gerador",
+        "Grupo": "B3",
+        "UF": "RJ",
+        "CPF/CNPJ": "1646512122"
+    }
+]
