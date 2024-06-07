@@ -82,10 +82,12 @@ export class UcListComponent implements OnInit {
     let inactive: number = 0;
     if (this.response) {
       this.response.map((uc: any) => {
-        uc.Status === false ? (inactive = inactive + 1) : (active = active + 1);
+          uc.Status === false ? (inactive = inactive + 1) : (active = active + 1);
+          console.log(active)
+          this.cardList[1].ativos = active;
+          this.cardList[1].inativos = inactive;
       });
-      this.cardList[1].ativos = active;
-      this.cardList[1].inativos = inactive;
+      
     }
   }
 
