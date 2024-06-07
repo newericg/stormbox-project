@@ -1,5 +1,5 @@
-<div class="uclist-page">
-  <div class="div uc-page px-5">
+<div class="row d-flex justify-content-center">
+  <div class="col-12 uc-page">
     <div class="row">
       <div class="col-12 py-3 d-flex justify-content-end">
         <app-button
@@ -15,24 +15,64 @@
         ></app-button>
       </div>
       <div class="col-12 py-1 d-flex justify-content-end">
-        <a href="">
-          <i class="bi bi-download"></i>
-          Download modelo de planilha</a
-        >
+        <i style="color: blue; margin-right: 10px;" class="bi bi-download"></i>
+        <a href="" class="d-flex"> Download modelo de planilha </a>
       </div>
-      <div class="my-3">
+      <div class="my-3 col">
         <div class="row d-flex">
-          @for (card of cardList; track card) { 
-            @if ($index === 0) {
-          <app-card class="col" [cardTitle]="card.title"></app-card>
-          } @else if ($index === 4) {
-          <app-card class="col-4" [cardTitle]="card.title"></app-card>
-          } @else {
-          <app-card class="col-2" [cardTitle]="card.title"></app-card>
-          } }
+          <app-card
+            class="col-12 col-xl-2 "
+            [cardTitle]="cardList[0].title"
+            [cardData]="cardList[0].totalUCs"
+            [card]="cardList[0]"
+          ></app-card>
+          <app-card
+            class="col-12 col-xl-2"
+            [cardTitle]="cardList[1].title"
+            [cardData]="cardList[1].ativos"
+            [cardData2]="cardList[1].inativos"
+            [cardDataTitle]="'Ativos'"
+            [cardDataTitle2]="'Inativos'"
+            [card]="cardList[1]"
+          ></app-card>
+          <app-card
+            class="col-12 col-xl-2"
+            [cardTitle]="cardList[2].title"
+            [cardData]="cardList[2].consumidor"
+            [cardData2]="cardList[2].gerador"
+            [cardDataTitle]="'Consumidor'"
+            [cardDataTitle2]="'Gerador'"
+            [card]="cardList[2]"
+          ></app-card>
+          <app-card
+            class="col-12 col-xl-2"
+            [cardTitle]="cardList[3].title"
+            [cardData]="cardList[3].grupoA"
+            [cardData2]="cardList[3].grupoB"
+            [cardDataTitle]="'Grupo A'"
+            [cardDataTitle2]="'Grupo B'"
+            [card]="cardList[3]"
+          ></app-card>
+          <app-card
+            class="col-12 col-xl-4"
+            [cardTitle]="cardList[4].title"
+            [cardData]="cardList[4].comEndereco"
+            [cardDataTitle]="'Com endereço'"
+            [cardData2]="cardList[4].semEndereco"
+            [cardDataTitle2]="'Sem endereço'"
+            [cardData3]="cardList[4].comCPF"
+            [cardDataTitle3]="'Com CPF/CNPJ'"
+            [cardData4]="cardList[4].semCPF"
+            [cardDataTitle4]="'Sem CPF/CNPJ'"
+            [card]="cardList[4]"
+          ></app-card>
         </div>
       </div>
-      <app-table tableTitle="Lista de UCs cadastradas"></app-table>
+      <app-table
+        [tableData]="response"
+        [tableHeader]="tableHeaderList"
+        tableTitle="Lista de UCs cadastradas"
+      ></app-table>
     </div>
   </div>
 </div>

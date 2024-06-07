@@ -1,10 +1,303 @@
-<div class="row uc-register-page d-flex justify-content-between px-4">
+<div
+  class="row uc-register-page d-flex justify-content-between p-5 h-100 w-100"
+>
   <div class="col">
-    <p>Cadastro de nova UC</p>
+    <h2>Cadastro de nova UC</h2>
   </div>
-  <div class="col d-flex">
-    <app-button backgroundColor="red" text="Cancelar"></app-button>
-    <app-button backgroundColor="#6691e7" text="Cadastrar UC"></app-button>
+  <div class="col d-flex justify-content-end">
+    <app-button
+      backgroundColor="red"
+      text="Cancelar"
+      (click)="navigateTo('/gestao-de-ucs')"
+    ></app-button>
+    <app-button
+      (click)="onSubmit()"
+      backgroundColor="#6691e7"
+      text="Cadastrar UC"
+      [disabled]="UCForm.invalid"
+    ></app-button>
   </div>
 
+  <!-- LINHA 1 -->
+  <form [formGroup]="UCForm" class="px-5">
+    <div class="row">
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Vigência Inicial</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input
+          class="p-2 w-100"
+          type="date"
+          formControlName="vigenciaInicial"
+        />
+        @if (UCForm.controls['vigenciaInicial'].invalid &&
+        UCForm.controls['vigenciaInicial'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+    </div>
+
+    <!-- LINHA 2 -->
+    <div class="row">
+      <div class="col-6 col-xl-3 my-2">
+        <div class="d-flex justify-content-between my-3">
+          <label>Concessionária *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+          [ngClass]="{
+            'input-error':
+              UCForm.controls['concessionaria'].touched &&
+              UCForm.controls.concessionaria.invalid
+          }"
+          class="p-2 w-100"
+          name="concessionaria"
+          id="concessionaria"
+          formControlName="concessionaria"
+        >
+          @for (item of concessionariaList; track item) {
+          <option [value]="item.id">{{ item.title }}</option>
+          }
+        </select>
+        @if (UCForm.controls['concessionaria'].invalid &&
+        UCForm.controls['concessionaria'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-1 my-2">
+        <div class="d-flex justify-content-between my-3">
+          <label>UF *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+          [ngClass]="{'input-error': UCForm.controls['UF'].touched && UCForm.controls.UF.invalid}"
+          class="p-2 w-100" name="UF" id="UF" formControlName="UF">
+          @for (item of ufList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+        @if (UCForm.controls['UF'].invalid && UCForm.controls['UF'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Nº unidade/instalação *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input 
+        [ngClass]="{'input-error': UCForm.controls['unidade'].touched && UCForm.controls.unidade.invalid}"
+        class="p-2 w-100" type="select" formControlName="unidade" />
+        @if (UCForm.controls['unidade'].invalid &&
+        UCForm.controls['unidade'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Nº cliente</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input class="p-2 w-100" type="select" formControlName="cliente" />
+      </div>
+    </div>
+
+    <!-- LINHA 3 -->
+    <div class="row">
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Empresa *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input 
+        [ngClass]="{'input-error': UCForm.controls['empresa'].touched && UCForm.controls.empresa.invalid}"
+        class="p-2 w-100" type="text" formControlName="empresa" />
+        @if (UCForm.controls['empresa'].invalid &&
+        UCForm.controls['empresa'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Descrição da unidade *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input
+          [ngClass]="{'input-error': UCForm.controls['descricaoUnidade'].touched && UCForm.controls.descricaoUnidade.invalid}"
+          class="p-2 w-100"
+          type="text"
+          formControlName="descricaoUnidade"
+        />
+        @if (UCForm.controls['descricaoUnidade'].invalid &&
+        UCForm.controls['descricaoUnidade'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Tipo *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select 
+        [ngClass]="{'input-error': UCForm.controls['tipo'].touched && UCForm.controls.tipo.invalid}"
+        class="p-2 w-100" name="tipo" id="tipo" formControlName="tipo">
+          @for (item of tipoList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+        @if (UCForm.controls['tipo'].invalid && UCForm.controls['tipo'].touched)
+        {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Modalidade *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+        [ngClass]="{'input-error': UCForm.controls['modalidade'].touched && UCForm.controls.modalidade.invalid}"
+          class="p-2 w-100"
+          name="modalidade"
+          id="modalidade"
+          formControlName="modalidade"
+        >
+          @for (item of modalidadeList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+        @if (UCForm.controls['modalidade'].invalid &&
+        UCForm.controls['modalidade'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>É cliente rural? *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+          [ngClass]="{'input-error': UCForm.controls['clienteRural'].touched && UCForm.controls.clienteRural.invalid}"
+          class="p-2 w-100"
+          name="clienteRural"
+          id="clienteRural"
+          formControlName="clienteRural"
+        >
+          @for (item of clienteRuralList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+        @if (UCForm.controls['clienteRural'].invalid &&
+        UCForm.controls['clienteRural'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+    </div>
+
+    <!-- LINHA 4 -->
+    <div class="row">
+      <div class="col-6 col-xl-3 my-2">
+        <div class="d-flex justify-content-between my-2">
+          <label>Tipo de organização</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+          class="p-2 w-100"
+          name="organizacao"
+          id="organizacao"
+          formControlName="organizacao"
+        >
+          @for (item of organizacaoList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="col-6 col-xl-2 my-2">
+        <div class="d-flex justify-content-between my-2">
+          <label>Tipo de ligação </label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <select
+          class="p-2 w-100"
+          name="ligacao"
+          id="ligacao"
+          formControlName="ligacao"
+        >
+          @for (item of ligacaoList; track item) {
+          <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <p class="my-3 font-weight-bold">Dados de login na concessionária</p>
+    <div class="row">
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>CPF/CNPJ *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input
+          [ngClass]="{
+            'input-error':
+              UCForm.controls['cpfOuCnpj'].touched &&
+              UCForm.controls.cpfOuCnpj.invalid
+          }"
+          class="p-2 w-100"
+          type="text"
+          formControlName="cpfOuCnpj"
+          mask="CPF_CNPJ"
+        />
+        @if (UCForm.controls['cpfOuCnpj'].invalid &&
+        UCForm.controls['cpfOuCnpj'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>E-mail *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input
+          [ngClass]="{
+            'input-error':
+              UCForm.controls['email'].touched && UCForm.controls.email.invalid
+          }"
+          class="p-2 w-100"
+          type="text"
+          formControlName="email"
+        />
+        @if ( UCForm.controls.email.errors?.['email'] &&
+        UCForm.controls['email'].touched ) {
+        <div class="text-danger">Formato incorreto.</div>
+        } @else if (UCForm.controls.email.errors?.['required'] &&
+        UCForm.controls['email'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+      <div class="col-6 col-xl-2 my-3">
+        <div class="d-flex justify-content-between my-2">
+          <label>Senha *</label>
+          <i class="bi bi-info-circle"></i>
+        </div>
+        <input
+          [ngClass]="{
+            'input-error':
+              UCForm.controls['senha'].touched && UCForm.controls.senha.invalid
+          }"
+          class="p-2 w-100"
+          type="password"
+          formControlName="senha"
+        />
+        @if (UCForm.controls.senha.errors?.['minlength'] &&
+        UCForm.controls['senha'].touched) {
+        <div class="text-danger">Deve ter um minimo de 6 caracteres.</div>
+        } @else if (UCForm.controls.senha.errors?.['required'] &&
+        UCForm.controls['senha'].touched) {
+        <div class="text-danger">Campo obrigatório.</div>
+        }
+      </div>
+    </div>
+  </form>
 </div>
